@@ -1,0 +1,348 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- 2. APP LAYOUT + NAVBAR ---------- */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(15, 23, 42, 0.95);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+  padding: 0.8rem 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav-brand {
+  margin-right: 14rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #60a5fa, #a78bfa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.icon {
+  height: 2rem;
+  width: 4rem;
+  margin-right: 24rem;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1rem;
+  color: #cbd5e1;
+  text-decoration: none;
+  font-weight: 500;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.nav-link:hover {
+  background: rgba(59, 130, 246, 0.15);
+  color: #e5e7eb;
+  transform: translateY(-1px);
+}
+
+.nav-link.active {
+  background: linear-gradient(135deg, rgba(59, 130, 246, 0.25), rgba(99, 102, 241, 0.25));
+  color: #60a5fa;
+  box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+}
+
+.main-content {
+  padding: 2rem;
+  min-height: calc(100vh - 70px);
+}
+
+/* ---------- 3. COMMON BUTTONS (ALL PAGES) ---------- */
+
+
+.btn-primary {
+  padding: 0.15rem 0.3rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  background: linear-gradient(135deg, #22c55e, #0a8135);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 10px 30px rgba(34, 197, 94, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 35px rgba(34, 197, 94, 0.5);
+}
+
+.btn.outline {
+  background: transparent;
+  color: #e5e7eb;
+  border-color: rgba(148, 163, 184, 0.6);
+}
+
+.btn.outline:hover {
+  background: rgba(30, 64, 175, 0.5);
+  border-color: #60a5fa;
+}
+
+.btn.danger {
+  background: rgba(239, 68, 68, 0.18);
+  color: #fecaca;
+  border-color: rgba(248, 113, 113, 0.8);
+}
+
+.btn.danger:hover {
+  background: rgba(239, 68, 68, 0.32);
+}
+
+/* ---------- 4. USERLIST TABLE PAGE ---------- */
+.page-container {
+  max-width: 960px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background: radial-gradient(circle at top left, #1d4ed8 0, #020617 55%);
+  border-radius: 16px;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(148, 163, 184, 0.3);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f9fafb;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f9fafb;
+}
+
+.table-header h1 {
+  font-size: 1.6rem;
+  letter-spacing: 0.04em;
+}
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 0.9rem;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  background: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(16px);
+}
+
+.items-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 620px;
+}
+
+.items-table thead {
+  background: linear-gradient(135deg, #1d4ed8, #4f46e5);
+}
+
+.items-table th,
+.items-table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+}
+
+.items-table th {
+  text-align: left;
+  font-weight: 600;
+  color: #e5e7eb;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.6);
+}
+
+.items-table tbody tr {
+  border-bottom: 1px solid rgba(51, 65, 85, 0.8);
+  transition: background 0.16s ease, transform 0.12s ease;
+}
+
+.items-table tbody tr:nth-child(even) {
+  background: rgba(15, 23, 42, 0.9);
+}
+
+.items-table tbody tr:nth-child(odd) {
+  background: rgba(15, 23, 42, 0.75);
+}
+
+.items-table tbody tr:hover {
+  background: rgba(30, 64, 175, 0.55);
+  transform: translateY(-1px);
+}
+
+.actions-cell {
+  text-align: right;
+  white-space: wrap;
+}
+
+.actions-cell .btn {
+  margin-left: 0.4rem;
+}
+
+.loader,
+.empty-state {
+  margin-top: 1.5rem;
+  text-align: center;
+  color: #e5e7eb;
+  font-size: 0.95rem;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0.4;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.4;
+  }
+}
+
+/* ---------- 5. USERADD & EDITUSER FORMS ---------- */
+.form-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 1rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #f9fafb;
+}
+
+.form-card {
+  width: 100%;
+  max-width: 520px;
+  padding: 1.8rem 1.7rem;
+  border-radius: 18px;
+  background: radial-gradient(circle at top left, #1d4ed8 0, #020617 52%);
+  box-shadow: 0 26px 60px rgba(15, 23, 42, 0.95);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  backdrop-filter: blur(18px);
+}
+
+.form-header h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.form-header p {
+  font-size: 0.9rem;
+  color: #cbd5f5;
+  margin-bottom: 1.4rem;
+}
+
+.form-grid {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 1.4rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #bfdbfe;
+}
+
+.form-group input {
+  padding: 0.55rem 0.75rem;
+  border-radius: 0.6rem;
+  border: 1px solid rgba(148, 163, 184, 0.6);
+  font-size: 0.9rem;
+  outline: none;
+  transition: all 0.16s ease;
+}
+
+.form-group input:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 1px rgba(59, 130, 246, 0.7);
+  transform: translateY(-1px);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.6rem;
+}
+
+/* ---------- 6. RESPONSIVE (MOBILE) ---------- */
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+
+  .nav-brand {
+    font-size: 1.2rem;
+  }
+
+  .nav-list {
+    gap: 1rem;
+  }
+
+  .main-content,
+  .form-page {
+    padding: 1rem 0.5rem;
+  }
+
+  .page-container {
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .table-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .form-card {
+    padding: 1.4rem 1.2rem;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .form-actions .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .items-table {
+    min-width: 100%;
+  }
+}
